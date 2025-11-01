@@ -1,46 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NEIO Agency</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AGENCY - Marketing that leadership can defend</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <img src="NEIO 225x225.png" alt="NEIO Agency Logo" class="logo">
-    <h1>NEIO Agency</h1>
-    <p class="tagline">Creative. Strategic. Digital.</p>
-  </header>
-
-  <section id="about">
-    <h2>About Us</h2>
-    <p>NEIO Agency is a forward-thinking creative agency focused on digital innovation, branding, and strategy. We turn ideas into impactful experiences.</p>
-  </section>
-
-  <section id="services">
-    <h2>Our Services</h2>
-    <ul>
-      <li>Brand Strategy & Identity</li>
-      <li>Web Design & Development</li>
-      <li>Social Media Marketing</li>
-      <li>Content Creation</li>
-    </ul>
-  </section>
-
-  <section id="contact">
-    <h2>Contact Us</h2>
-    <p>Email: <a href="mailto:info@neioagency.com">info@neioagency.com</a></p>
-    <p>Follow us:</p>
-    <div class="socials">
-      <a href="#" target="_blank">Instagram</a> |
-      <a href="#" target="_blank">LinkedIn</a> |
-      <a href="#" target="_blank">Twitter</a>
+  <header class="header">
+    <div class="container">
+      <span class="brand">AGENCY</span>
     </div>
-  </section>
-
-  <footer>
-    <p>© 2025 NEIO Agency. All rights reserved.</p>
+  </header>
+  <main class="main-content">
+    <section class="hero">
+      <h1>Your marketing should behave like an asset, not an expense.</h1>
+      <p>
+        We design, optimize and scale performance systems — website, UX,
+        paid acquisition, automation, and decision-making intelligence —
+        built around revenue, not vanity metrics.
+      </p>
+    </section>
+    <section class="capabilities">
+      <h2>What you're actually buying</h2>
+      <ul>
+        <li><strong>Website Build / Rebuild:</strong> Your site becomes a conversion surface, not a brochure.</li>
+        <li><strong>Conversion UX Optimization:</strong> Reduce friction. Increase qualified actions.</li>
+        <li><strong>Paid Performance Acquisition:</strong> Predictable, scalable acquisition with full attribution.</li>
+        <li><strong>Brand Positioning Messaging:</strong> Make it painfully clear why you're the right choice.</li>
+        <li><strong>Marketing Automation / CRM:</strong> Lead nurturing and lifecycle programs that turn interest into revenue automatically.</li>
+      </ul>
+    </section>
+    <section class="contact">
+      <h2>Get an honest 20-minute assessment</h2>
+      <p>
+        You bring your targets. We'll tell you what's realistic and what’s not. Zero obligation.
+      </p>
+      <a href="mailto:contact@youragency.com" class="cta-button">Talk to Strategy</a>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> AGENCY. All rights reserved.</p>
+    </div>
   </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
+
