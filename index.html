@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>AGENCY — Marketing that leadership can defend</title>
+  <title>AGENCY — Because Not Everyone Is Online</title>
   <meta name="description" content="Performance marketing, conversion architecture, UX, and strategic advisory for CEOs, founders, and CMOs." />
 
   <!-- Tailwind via CDN -->
@@ -39,18 +39,26 @@
       position: relative;
       width: 100%;
       overflow: hidden;
+      min-height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
     .fade-image-container img {
       display: block;
       width: 100%;
-      height: auto;
+      height: 400px;
+      object-fit: cover;
+      object-position: center;
+      position: relative;
+      z-index: 1;
     }
     .fade-image-container::before,
     .fade-image-container::after {
       content: "";
       position: absolute;
       top: 0;
-      width: 14%;
+      width: 16%;
       height: 100%;
       z-index: 2;
       pointer-events: none;
@@ -63,44 +71,87 @@
       right: 0;
       background: linear-gradient(to left, #0A0A0A 0%, transparent 100%);
     }
+    .fade-image-heading {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      z-index: 3;
+      color: #fff;
+      font-size: 2.5rem;
+      text-align: center;
+      font-weight: 700;
+      text-shadow: 0 2px 12px #0A0A0A88;
+      mix-blend-mode: lighten;
+      white-space: normal;
+      width: 80%;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+    }
+    @media (max-width: 600px) {
+      .fade-image-container img {
+        height: 250px;
+      }
+      .fade-image-heading {
+        font-size: 1.2rem;
+        width: 95%;
+      }
+      .fade-image-container {
+        min-height: 250px;
+      }
+    }
   </style>
 </head>
 <body class="bg-bg text-txt flex flex-col min-h-screen">
 
-  <!-- HEADER / BRAND -->
-  <header class="w-full border-b border-line/40 bg-[#0A0A0A]/80 backdrop-blur-sm">
+  <!-- HEADER / BRAND & SOCIAL ICONS -->
+  <header class="w-full border-b border-line/40 bg-[#0A0A0A]/80 backdrop-blur-sm relative z-10">
     <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between text-[12px] leading-none">
       <div class="flex items-center gap-4">
-        <!-- Logo Inserted Here -->
-        <img src="NEIO 225x225.png" alt="NEIO Agency Logo" class="h-10 w-10 rounded-full border border-line/40" />
-        <div class="flex flex-col">
-          <span class="text-txt text-sm font-medium tracking-tight">AGENCY</span>
-          <span class="text-dim text-[11px] font-normal tracking-normal">performance / strategy</span>
-        </div>
+        <!-- Bigger logo, no subtitle -->
+        <img src="NEIO-225x225.png" alt="NEIO Agency Logo" class="h-16 w-16 rounded-full border border-line/40" />
+        <span class="text-txt text-xl font-extrabold tracking-tight ml-2">AGENCY</span>
       </div>
-      <div class="text-dim text-[11px] hidden sm:block">
-        Pre-launch preview · Private beta
+      <!-- Social icons row -->
+      <div class="flex space-x-6 items-center">
+        <!-- Youtube -->
+        <a href="https://youtube.com" target="_blank" rel="noopener" aria-label="YouTube">
+          <svg viewBox="0 0 32 32" fill="currentColor" width="20" height="20"><path d="M31.204 8.333c-.384-1.439-1.511-2.565-2.949-2.947C25.48 4.902 16 4.902 16 4.902s-9.48 0-12.255.484c-1.438.383-2.565 1.507-2.949 2.947C.308 11.119.308 16,.308 16s0 4.881.488 7.667c.384 1.439 1.511 2.564 2.949 2.947C6.52 27.098 16 27.098 16 27.098s9.48 0 12.255-.484c1.438-.383 2.565-1.507 2.949-2.947.488-2.786.488-7.667.488-7.667s0-4.881-.488-7.667zm-17.045 11.947V11.72l8.261 4.28-8.261 4.28z"/></svg>
+        </a>
+        <!-- Instagram -->
+        <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg viewBox="0 0 32 32" fill="currentColor" width="20" height="20"><path d="M16 7c2.93 0 3.283.012 4.437.064C22.64 7.127 23.373 7.36 23.95 7.638c.558.265 1.012.604 1.455 1.047.444.443.782.896 1.047 1.455.279.575.511 1.308.574 2.513.052 1.154.064 1.507.064 4.437s-.012 3.283-.064 4.437c-.063 1.205-.295 1.938-.574 2.513-.265.559-.603 1.012-1.047 1.455-.443.443-.897.782-1.455 1.047-.577.278-1.309.511-2.513.574-1.154.052-1.507.064-4.437.064s-3.283-.012-4.437-.064c-1.204-.063-1.937-.296-2.513-.574-.559-.265-1.012-.604-1.455-1.047-.444-.443-.782-.896-1.047-1.455-.279-.575-.511-1.308-.574-2.513C7.012 19.72 7 19.367 7 16.5s.012-3.283.064-4.437c.063-1.205.295-1.938.574-2.513.265-.559.603-1.012 1.047-1.455.443-.443.897-.782 1.455-1.047.577-.278 1.309-.511 2.513-.574C12.716 7.012 13.07 7 16 7zm0-2C13.013 5 12.633 5.012 11.472 5.064c-1.313.06-2.222.276-3.121.576-1.012.33-1.814.753-2.617 1.556-.803.803-1.226 1.605-1.556 2.617-.3.899-.516 1.808-.576 3.121C5.012 10.367 5 10.747 5 13.734v4.531c.012 1.188.064 1.567.064 2.728.06 1.313.276 2.222.576 3.121.33 1.012.753 1.814 1.556 2.617.803.803 1.605 1.226 2.617 1.556.899.3 1.808.516 3.121.576C12.633 26.988 13.013 27 16 27c2.987 0 3.367-.012 4.528-.064 1.313-.06 2.222-.276 3.121-.576 1.012-.33 1.814-.753 2.617-1.556.803-.803 1.226-1.605 1.556-2.617.3-.899.516-1.808.576-3.121.052-1.154.064-1.507.064-4.528s-.012-3.373-.064-4.528c-.06-1.313-.276-2.222-.576-3.121-.33-1.012-.753-1.814-1.556-2.617-.803-.803-1.605-1.226-2.617-1.556-.899-.3-1.808-.516-3.121-.576C19.367 5.012 18.987 5 16 5z"/><circle cx="16" cy="16" r="5"/><circle cx="22.5" cy="9.5" r="1.5"/></svg>
+        </a>
+        <!-- TikTok -->
+        <a href="https://tiktok.com" target="_blank" rel="noopener" aria-label="TikTok">
+          <svg viewBox="0 0 32 32" fill="currentColor" width="20" height="20"><path d="M21.48 11.78v7.01c0 3.92-3.33 7.11-7.44 6.67-3.22-.35-5.58-3.23-5.51-6.53.06-3.13 2.72-5.58 5.76-5.6V19.4c0 .91-.74 1.63-1.66 1.59-.87-.03-1.52-.78-1.5-1.65.02-.85.73-1.53 1.59-1.5.02 0 .04.01.06.01v-2.09c-2.09.02-3.78 1.74-3.75 3.81.03 2.13 1.81 3.87 3.94 3.85 2.04-.02 3.7-1.67 3.7-3.71v-6.34c.84.37 1.77.58 2.74.58.41 0 .81-.03 1.21-.08v-2c-.77.11-1.54.03-2.21-.21zm1.21-5.15v9.81c1.71.7 3.68.4 5.06-.87V11.7c-1.51 0-2.84-.61-3.81-1.59-.71-.71-1.19-1.6-1.25-2.62zm-1.21-4.11h2V5.7c-.53 0-1.04-.06-1.55-.19V2.52z"/></svg>
+        </a>
+        <!-- LinkedIn -->
+        <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg viewBox="0 0 32 32" fill="currentColor" width="20" height="20"><path d="M27 4H5c-1.1 0-2 .9-2 2v20c0 1.1.9 2 2 2h22c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-14 22h-4v-10h4v10zm-2-11.2c-1.28 0-2.32-1.05-2.32-2.35s1.04-2.35 2.32-2.35 2.32 1.05 2.32 2.35c0 1.3-1.04 2.35-2.32 2.35zm14 11.2h-4v-5.61c0-1.47-.03-3.37-2.06-3.37-2.06 0-2.37 1.61-2.37 3.27v5.71h-4v-10h3.85v1.35h.06c.54-.97 1.84-2 3.79-2 4.05 0 4.8 2.67 4.8 6.13v4.52z"/></svg>
+        </a>
+        <!-- X / Twitter -->
+        <a href="https://x.com" target="_blank" rel="noopener" aria-label="X">
+          <svg viewBox="0 0 32 32" fill="currentColor" width="20" height="20"><path d="M23.079 6.52h3.831l-8.372 9.57 9.87 9.89H19.606l-6.243-7.066-7.137 7.066H2.393l8.987-9.09-9.42-9.37h8.225l5.686 6.426zm-1.657 17.34h2.125L11.96 8.01h-2.091z"/></svg>
+        </a>
       </div>
     </div>
   </header>
 
   <main class="flex-1 flex flex-col gap-24 pb-24">
-
-    <!-- HERO -->
-    <section class="pt-16 md:pt-24 px-6">
-      <div class="max-w-6xl mx-auto grid gap-12 md:grid-cols-2 items-start">
-        <!-- Left copy -->
-        <div class="flex flex-col gap-8 w-full">
-          <div>
-            <h1 class="text-2xl md:text-4xl font-semibold leading-tight tracking-tight text-txt">
-              Neio Not Everybody Is Online ...
-            </h1>
-          </div>
-          <div class="fade-image-container mt-6 mb-8">
-            <img src="business-team-working-office-worker-concept.jpg" alt="Business Team Working Office" />
-          </div>
+    <!-- HERO SECTION WITH IMAGE AND TITLE -->
+    <section class="pt-5 md:pt-10 px-0">
+      <div class="fade-image-container">
+        <img src="IMG_6961.jpg" alt="Hero Image" />
+        <div class="fade-image-heading">
+          Because Not Everyone Is Online
         </div>
-        <!-- Credibility card -->
+      </div>
+    </section>
+
+    <!-- WHERE WE CREATE IMPACT -->
+    <section class="px-6 mt-2">
+      <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-start">
         <div class="bg-panel border border-line/60 rounded-3xl shadow-card p-6 flex flex-col gap-6">
           <div class="text-xs font-medium uppercase text-dim tracking-wider mb-2">
             WHERE WE CREATE IMPACT
@@ -228,8 +279,6 @@
             No fluff. No pitch deck.
           </div>
         </div>
-
-        <!-- Replace the form 'action' with your actual submission endpoint -->
         <form
           class="grid gap-4 text-sm"
           onsubmit="event.preventDefault(); document.getElementById('thanks').classList.remove('hidden'); this.classList.add('hidden');"
@@ -237,44 +286,21 @@
           <div class="grid md:grid-cols-2 gap-4">
             <div class="flex flex-col gap-2">
               <label class="text-[11px] text-dim">Name</label>
-              <input
-                required
-                class="bg-bg border border-line/60 rounded-xl px-4 py-3 text-txt placeholder:text-dim/50 text-sm focus:outline-none focus:border-[#F5F5F5]/80"
-                placeholder="Your name"
-                name="name"
-                />
+              <input required class="bg-bg border border-line/60 rounded-xl px-4 py-3 text-txt placeholder:text-dim/50 text-sm focus:outline-none focus:border-[#F5F5F5]/80" placeholder="Your name" name="name"/>
             </div>
-
             <div class="flex flex-col gap-2">
               <label class="text-[11px] text-dim">Role</label>
-              <input
-                required
-                class="bg-bg border border-line/60 rounded-xl px-4 py-3 text-txt placeholder:text-dim/50 text-sm focus:outline-none focus:border-[#F5F5F5]/80"
-                placeholder="CEO / CMO / Founder / ..."
-                name="role"
-                />
+              <input required class="bg-bg border border-line/60 rounded-xl px-4 py-3 text-txt placeholder:text-dim/50 text-sm focus:outline-none focus:border-[#F5F5F5]/80" placeholder="CEO / CMO / Founder / ..." name="role"/>
             </div>
           </div>
-
           <div class="grid md:grid-cols-2 gap-4">
             <div class="flex flex-col gap-2">
               <label class="text-[11px] text-dim">Work email</label>
-              <input
-                required
-                type="email"
-                class="bg-bg border border-line/60 rounded-xl px-4 py-3 text-txt placeholder:text-dim/50 text-sm focus:outline-none focus:border-[#F5F5F5]/80"
-                placeholder="you@company.com"
-                name="email"
-                />
+              <input required type="email" class="bg-bg border border-line/60 rounded-xl px-4 py-3 text-txt placeholder:text-dim/50 text-sm focus:outline-none focus:border-[#F5F5F5]/80" placeholder="you@company.com" name="email"/>
             </div>
-
             <div class="flex flex-col gap-2">
               <label class="text-[11px] text-dim">Primary goal</label>
-              <select
-                required
-                class="bg-bg border border-line/60 rounded-xl px-4 py-3 text-txt text-sm focus:outline-none focus:border-[#F5F5F5]/80"
-                name="goal"
-              >
+              <select required class="bg-bg border border-line/60 rounded-xl px-4 py-3 text-txt text-sm focus:outline-none focus:border-[#F5F5F5]/80" name="goal">
                 <option value="">Select...</option>
                 <option>Increase qualified pipeline</option>
                 <option>Stabilize acquisition cost</option>
@@ -284,37 +310,18 @@
               </select>
             </div>
           </div>
-
           <div class="flex flex-col gap-2">
             <label class="text-[11px] text-dim">Biggest bottleneck right now</label>
-            <textarea
-              rows="3"
-              class="bg-bg border border-line/60 rounded-xl px-4 py-3 text-txt placeholder:text-dim/50 text-sm focus:outline-none focus:border-[#F5F5F5]/80"
-              placeholder="Example: 'Traffic is decent, conversion is bad. Sales is complaining about lead quality.'"
-              name="bottleneck"
-            ></textarea>
+            <textarea rows="3" class="bg-bg border border-line/60 rounded-xl px-4 py-3 text-txt placeholder:text-dim/50 text-sm focus:outline-none focus:border-[#F5F5F5]/80" placeholder="Example: 'Traffic is decent, conversion is bad. Sales is complaining about lead quality.'" name="bottleneck"></textarea>
           </div>
-
-          <button
-            type="submit"
-            class="bg-[#F5F5F5] text-[#0A0A0A] font-semibold text-sm rounded-xl px-4 py-3 text-center hover:opacity-90 transition"
-          >
-            Request assessment →
-          </button>
-
+          <button type="submit" class="bg-[#F5F5F5] text-[#0A0A0A] font-semibold text-sm rounded-xl px-4 py-3 text-center hover:opacity-90 transition">Request assessment →</button>
           <div class="text-[10px] text-dim leading-relaxed">
-            This is not a sales call. You’ll get a direct view on where your spend
-            should go first — and where it shouldn’t.
+            This is not a sales call. You’ll get a direct view on where your spend should go first — and where it shouldn’t.
           </div>
         </form>
-
-        <div
-          id="thanks"
-          class="hidden text-[12px] text-green-400 bg-[#0A0A0A]/40 border border-green-600/40 rounded-xl p-4"
-        >
+        <div id="thanks" class="hidden text-[12px] text-green-400 bg-[#0A0A0A]/40 border border-green-600/40 rounded-xl p-4">
           Thank you. Strategy will reach out.
         </div>
-
       </div>
     </section>
   </main>
@@ -329,19 +336,16 @@
           Performance / positioning / conversion architecture
         </div>
       </div>
-
       <div class="flex flex-col gap-1 text-dim/80">
         <div>Pre-launch version. Full platform coming soon.</div>
         <div>We build marketing systems that leadership can defend.</div>
       </div>
-
       <div class="flex flex-col gap-1 text-dim/60 text-right md:text-left">
         <div>© <span id="year"></span> AGENCY</div>
         <div>All rights reserved.</div>
       </div>
     </div>
   </footer>
-
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
