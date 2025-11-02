@@ -1,53 +1,348 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="bg-[#0A0A0A] text-[#F5F5F5] antialiased">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>AGENCY - Marketing that leadership can defend</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>AGENCY — Marketing that leadership can defend</title>
+  <meta name="description" content="Performance marketing, conversion architecture, UX, and strategic advisory for CEOs, founders, and CMOs." />
+
+  <!-- Tailwind via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    /* Tailwind theme extensions for this page only */
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            bg: "#0A0A0A",
+            panel: "#141414",
+            line: "#2A2A2A",
+            txt: "#F5F5F5",
+            dim: "#8F8F8F",
+          },
+          boxShadow: {
+            card: "0 24px 64px -8px rgba(0,0,0,0.6)",
+            soft: "0 16px 40px -4px rgba(0,0,0,0.4)"
+          },
+          borderRadius: {
+            "2xl": "1rem",
+            "3xl": "1.5rem"
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body{font-feature-settings:"ss01" 1,"ss02" 1;background-color:#0A0A0A}
+  </style>
 </head>
-<body>
-  <header class="header">
-    <div class="container">
-      <span class="brand">AGENCY</span>
+<body class="bg-bg text-txt flex flex-col min-h-screen">
+
+  <!-- HEADER / BRAND -->
+  <header class="w-full border-b border-line/40 bg-[#0A0A0A]/80 backdrop-blur-sm">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between text-[12px] leading-none">
+      <div class="font-medium tracking-tight text-txt flex items-baseline gap-2">
+        <span class="text-txt text-sm">AGENCY</span>
+        <span class="text-dim text-[11px] font-normal tracking-normal">performance / strategy</span>
+      </div>
+      <div class="text-dim text-[11px] hidden sm:block">
+        Pre-launch preview · Private beta
+      </div>
     </div>
   </header>
-  <main class="main-content">
-    <section class="hero">
-      <h1>Your marketing should behave like an asset, not an expense.</h1>
-      <p>
-        We design, optimize and scale performance systems — website, UX,
-        paid acquisition, automation, and decision-making intelligence —
-        built around revenue, not vanity metrics.
-      </p>
+
+  <main class="flex-1 flex flex-col gap-24 pb-24">
+
+    <!-- HERO -->
+    <section class="pt-16 md:pt-24 px-6">
+      <div class="max-w-6xl mx-auto grid gap-12 md:grid-cols-2 items-start">
+        <!-- Left copy -->
+        <div class="flex flex-col gap-8">
+          <div>
+            <h1 class="text-2xl md:text-4xl font-semibold leading-tight tracking-tight text-txt">
+              Marketing that leadership can defend.
+            </h1>
+            <p class="text-dim text-base md:text-lg leading-relaxed mt-4 max-w-md">
+              We build and optimize digital marketing systems — websites,
+              UX, paid acquisition, conversion architecture, automation —
+              tied directly to revenue, efficiency, and board-level clarity.
+            </p>
+            <p class="text-dim text-xs leading-relaxed mt-4 max-w-md">
+              For CEOs, founders and CMOs who want results, not noise.
+            </p>
+          </div>
+
+          <div class="grid gap-4 text-[11px] text-dim leading-relaxed">
+            <div class="flex items-start gap-3">
+              <div class="w-1.5 h-1.5 rounded-full bg-[#F5F5F5] mt-1.5"></div>
+              <p>We prioritize the single highest-impact lever first.</p>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="w-1.5 h-1.5 rounded-full bg-[#F5F5F5] mt-1.5"></div>
+              <p>We operate in commercial language: revenue, CAC, runway, margin.</p>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="w-1.5 h-1.5 rounded-full bg-[#F5F5F5] mt-1.5"></div>
+              <p>No vanity metrics. No “content for awareness” decks.</p>
+            </div>
+          </div>
+
+          <a href="#contact"
+            class="inline-block bg-[#F5F5F5] text-[#0A0A0A] font-semibold text-sm rounded-xl px-4 py-3 text-center w-fit hover:opacity-90 transition">
+            Get a 20-minute strategic assessment →
+          </a>
+        </div>
+
+        <!-- Credibility card -->
+        <div class="bg-panel border border-line/60 rounded-3xl shadow-card p-6 flex flex-col gap-6">
+          <div class="text-xs font-medium uppercase text-dim tracking-wider">
+            Where we create impact
+          </div>
+
+          <div class="grid gap-6 text-sm leading-relaxed">
+            <div class="flex flex-col gap-2">
+              <div class="text-txt font-medium tracking-tight">
+                Website & Conversion Architecture
+              </div>
+              <p class="text-dim text-[13px] leading-relaxed">
+                Your site should behave like a revenue surface, not a brochure.
+                We build / rebuild for clarity, credibility and conversion.
+              </p>
+            </div>
+
+            <div class="flex flex-col gap-2">
+              <div class="text-txt font-medium tracking-tight">
+                Paid Acquisition & Performance
+              </div>
+              <p class="text-dim text-[13px] leading-relaxed">
+                Scalable, trackable lead and demand generation.
+                Spend goes where ROI is provable.
+              </p>
+            </div>
+
+            <div class="flex flex-col gap-2">
+              <div class="text-txt font-medium tracking-tight">
+                Strategic Advisory for Leadership
+              </div>
+              <p class="text-dim text-[13px] leading-relaxed">
+                We align marketing with board expectations:
+                pipeline, CAC efficiency, pricing power, time-to-impact.
+              </p>
+            </div>
+          </div>
+
+          <div class="text-[10px] text-dim leading-relaxed pt-2 border-t border-line/40">
+            “We don’t buy campaigns. We buy repeatable performance.”
+          </div>
+        </div>
+      </div>
     </section>
-    <section class="capabilities">
-      <h2>What you're actually buying</h2>
-      <ul>
-        <li><strong>Website Build / Rebuild:</strong> Your site becomes a conversion surface, not a brochure.</li>
-        <li><strong>Conversion UX Optimization:</strong> Reduce friction. Increase qualified actions.</li>
-        <li><strong>Paid Performance Acquisition:</strong> Predictable, scalable acquisition with full attribution.</li>
-        <li><strong>Brand Positioning Messaging:</strong> Make it painfully clear why you're the right choice.</li>
-        <li><strong>Marketing Automation / CRM:</strong> Lead nurturing and lifecycle programs that turn interest into revenue automatically.</li>
-      </ul>
+
+    <!-- RESULTS / PROOF -->
+    <section class="px-6">
+      <div class="max-w-6xl mx-auto flex flex-col gap-8">
+        <div>
+          <div class="text-xs font-medium uppercase text-dim tracking-wider">
+            Proof
+          </div>
+          <h2 class="text-xl md:text-2xl font-semibold text-txt tracking-tight mt-2">
+            The numbers we move
+          </h2>
+          <p class="text-dim text-sm md:text-base leading-relaxed mt-4 max-w-2xl">
+            We’re measured on what matters to leadership: qualified pipeline,
+            cost to acquire a customer, conversion efficiency, perceived value.
+          </p>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="bg-panel border border-line/60 rounded-2xl p-6 flex flex-col gap-3 shadow-soft">
+            <div class="text-3xl font-semibold text-txt leading-none tracking-tight">
+              +41%
+            </div>
+            <div class="text-txt/80 text-sm font-medium leading-snug">
+              qualified demo requests in 6 weeks
+            </div>
+            <div class="text-dim text-[12px] leading-relaxed">
+              CRO sprint + sharper offer + retargeting rebuild.
+            </div>
+          </div>
+
+          <div class="bg-panel border border-line/60 rounded-2xl p-6 flex flex-col gap-3 shadow-soft">
+            <div class="text-3xl font-semibold text-txt leading-none tracking-tight">
+              -28%
+            </div>
+            <div class="text-txt/80 text-sm font-medium leading-snug">
+              customer acquisition cost
+            </div>
+            <div class="text-dim text-[12px] leading-relaxed">
+              Channel pruning and budget reallocation to high-acceptance
+              audiences.
+            </div>
+          </div>
+
+          <div class="bg-panel border border-line/60 rounded-2xl p-6 flex flex-col gap-3 shadow-soft">
+            <div class="text-3xl font-semibold text-txt leading-none tracking-tight">
+              2.4×
+            </div>
+            <div class="text-txt/80 text-sm font-medium leading-snug">
+              conversion rate after UX rebuild
+            </div>
+            <div class="text-dim text-[12px] leading-relaxed">
+              Friction removal, narrative clarity, proof architecture.
+            </div>
+          </div>
+
+          <div class="bg-panel border border-line/60 rounded-2xl p-6 flex flex-col gap-3 shadow-soft">
+            <div class="text-3xl font-semibold text-txt leading-none tracking-tight">
+              +32%
+            </div>
+            <div class="text-txt/80 text-sm font-medium leading-snug">
+              avg. deal size
+            </div>
+            <div class="text-dim text-[12px] leading-relaxed">
+              Repositioned brand from “vendor” to “specialist partner.”
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
-    <section class="contact">
-      <h2>Get an honest 20-minute assessment</h2>
-      <p>
-        You bring your targets. We'll tell you what's realistic and what’s not. Zero obligation.
-      </p>
-      <a href="mailto:contact@youragency.com" class="cta-button">Talk to Strategy</a>
+
+    <!-- CONTACT -->
+    <section id="contact" class="px-6">
+      <div class="max-w-xl mx-auto w-full bg-panel border border-line/60 rounded-3xl shadow-card p-6 flex flex-col gap-6">
+        <div class="flex flex-col gap-2">
+          <div class="text-xs font-medium uppercase text-dim tracking-wider">
+            Talk to strategy
+          </div>
+          <div class="text-lg md:text-xl font-semibold text-txt leading-tight tracking-tight">
+            Get a 20-minute strategic assessment.
+          </div>
+          <div class="text-[12px] text-dim leading-relaxed">
+            You bring your targets. We’ll tell you what’s realistic.
+            No fluff. No pitch deck.
+          </div>
+        </div>
+
+        <!-- Replace the form 'action' with your actual submission endpoint -->
+        <form
+          class="grid gap-4 text-sm"
+          onsubmit="event.preventDefault(); document.getElementById('thanks').classList.remove('hidden'); this.classList.add('hidden');"
+        >
+          <div class="grid md:grid-cols-2 gap-4">
+            <div class="flex flex-col gap-2">
+              <label class="text-[11px] text-dim">Name</label>
+              <input
+                required
+                class="bg-bg border border-line/60 rounded-xl px-4 py-3 text-txt placeholder:text-dim/50 text-sm focus:outline-none focus:border-[#F5F5F5]/80"
+                placeholder="Your name"
+                name="name"
+                />
+            </div>
+
+            <div class="flex flex-col gap-2">
+              <label class="text-[11px] text-dim">Role</label>
+              <input
+                required
+                class="bg-bg border border-line/60 rounded-xl px-4 py-3 text-txt placeholder:text-dim/50 text-sm focus:outline-none focus:border-[#F5F5F5]/80"
+                placeholder="CEO / CMO / Founder / ..."
+                name="role"
+                />
+            </div>
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-4">
+            <div class="flex flex-col gap-2">
+              <label class="text-[11px] text-dim">Work email</label>
+              <input
+                required
+                type="email"
+                class="bg-bg border border-line/60 rounded-xl px-4 py-3 text-txt placeholder:text-dim/50 text-sm focus:outline-none focus:border-[#F5F5F5]/80"
+                placeholder="you@company.com"
+                name="email"
+                />
+            </div>
+
+            <div class="flex flex-col gap-2">
+              <label class="text-[11px] text-dim">Primary goal</label>
+              <select
+                required
+                class="bg-bg border border-line/60 rounded-xl px-4 py-3 text-txt text-sm focus:outline-none focus:border-[#F5F5F5]/80"
+                name="goal"
+              >
+                <option value="">Select...</option>
+                <option>Increase qualified pipeline</option>
+                <option>Stabilize acquisition cost</option>
+                <option>Improve conversion rate</option>
+                <option>Reposition brand / justify higher pricing</option>
+                <option>Build internal marketing capability</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="flex flex-col gap-2">
+            <label class="text-[11px] text-dim">Biggest bottleneck right now</label>
+            <textarea
+              rows="3"
+              class="bg-bg border border-line/60 rounded-xl px-4 py-3 text-txt placeholder:text-dim/50 text-sm focus:outline-none focus:border-[#F5F5F5]/80"
+              placeholder="Example: 'Traffic is decent, conversion is bad. Sales is complaining about lead quality.'"
+              name="bottleneck"
+            ></textarea>
+          </div>
+
+          <button
+            type="submit"
+            class="bg-[#F5F5F5] text-[#0A0A0A] font-semibold text-sm rounded-xl px-4 py-3 text-center hover:opacity-90 transition"
+          >
+            Request assessment →
+          </button>
+
+          <div class="text-[10px] text-dim leading-relaxed">
+            This is not a sales call. You’ll get a direct view on where your spend
+            should go first — and where it shouldn’t.
+          </div>
+        </form>
+
+        <div
+          id="thanks"
+          class="hidden text-[12px] text-green-400 bg-[#0A0A0A]/40 border border-green-600/40 rounded-xl p-4"
+        >
+          Thank you. Strategy will reach out.
+        </div>
+
+      </div>
     </section>
   </main>
-  <footer class="footer">
-    <div class="container">
-      <p>&copy; <span id="year"></span> AGENCY. All rights reserved.</p>
+
+  <footer class="border-t border-line/40 bg-[#0A0A0A]/60 backdrop-blur-md">
+    <div class="max-w-6xl mx-auto px-6 py-12 text-[11px] text-dim flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
+      <div class="flex flex-col gap-1">
+        <div class="text-txt font-medium text-sm tracking-tight">
+          AGENCY
+        </div>
+        <div class="text-dim/80">
+          Performance / positioning / conversion architecture
+        </div>
+      </div>
+
+      <div class="flex flex-col gap-1 text-dim/80">
+        <div>Pre-launch version. Full platform coming soon.</div>
+        <div>We build marketing systems that leadership can defend.</div>
+      </div>
+
+      <div class="flex flex-col gap-1 text-dim/60 text-right md:text-left">
+        <div>© <span id="year"></span> AGENCY</div>
+        <div>All rights reserved.</div>
+      </div>
     </div>
   </footer>
 
   <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById("year").textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
+
+
 
