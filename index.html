@@ -10,7 +10,6 @@
   <script src="https://cdn.tailwindcss.com"></script>
 
   <script>
-    /* Tailwind theme extensions for this page only */
     tailwind.config = {
       theme: {
         extend: {
@@ -36,6 +35,34 @@
 
   <style>
     body{font-feature-settings:"ss01" 1,"ss02" 1;background-color:#0A0A0A}
+    .fade-image-container {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+    }
+    .fade-image-container img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+    .fade-image-container::before,
+    .fade-image-container::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      width: 14%;
+      height: 100%;
+      z-index: 2;
+      pointer-events: none;
+    }
+    .fade-image-container::before {
+      left: 0;
+      background: linear-gradient(to right, #0A0A0A 0%, transparent 100%);
+    }
+    .fade-image-container::after {
+      right: 0;
+      background: linear-gradient(to left, #0A0A0A 0%, transparent 100%);
+    }
   </style>
 </head>
 <body class="bg-bg text-txt flex flex-col min-h-screen">
@@ -63,11 +90,14 @@
     <section class="pt-16 md:pt-24 px-6">
       <div class="max-w-6xl mx-auto grid gap-12 md:grid-cols-2 items-start">
         <!-- Left copy -->
-        <div class="flex flex-col gap-8">
+        <div class="flex flex-col gap-8 w-full">
           <div>
             <h1 class="text-2xl md:text-4xl font-semibold leading-tight tracking-tight text-txt">
               Neio Not Everybody Is Online ...
             </h1>
+          </div>
+          <div class="fade-image-container mt-6 mb-8">
+            <img src="business-team-working-office-worker-concept.jpg" alt="Business Team Working Office" />
           </div>
         </div>
         <!-- Credibility card -->
