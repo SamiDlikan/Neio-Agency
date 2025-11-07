@@ -262,47 +262,86 @@
           </div>
         </div>
         <form
-          class="grid gap-4 text-sm"
-          action="mailto:contact@neio.agency"
-          method="POST"
-          enctype="text/plain"
-        >
-          <div class="grid md:grid-cols-2 gap-4">
-            <div class="flex flex-col gap-2">
-              <label class="text-[11px] text-dim">Name</label>
-              <input required class="bg-bg border border-line/60 rounded-xl px-4 py-3 text-txt placeholder:text-dim/50 text-sm focus:outline-none focus:border-[#F5F5F5]/80" placeholder="Your name" name="name"/>
-            </div>
-            <div class="flex flex-col gap-2">
-              <label class="text-[11px] text-dim">Role</label>
-              <input required class="bg-bg border border-line/60 rounded-xl px-4 py-3 text-txt placeholder:text-dim/50 text-sm focus:outline-none focus:border-[#F5F5F5]/80" placeholder="CEO / CMO / Founder / ..." name="role"/>
-            </div>
-          </div>
-          <div class="grid md:grid-cols-2 gap-4">
-            <div class="flex flex-col gap-2">
-              <label class="text-[11px] text-dim">Work email</label>
-              <input required type="email" class="bg-bg border border-line/60 rounded-xl px-4 py-3 text-txt placeholder:text-dim/50 text-sm focus:outline-none focus:border-[#F5F5F5]/80" placeholder="you@company.com" name="email"/>
-            </div>
-            <div class="flex flex-col gap-2">
-              <label class="text-[11px] text-dim">Primary goal</label>
-              <select required class="bg-bg border border-line/60 rounded-xl px-4 py-3 text-txt text-sm focus:outline-none focus:border-[#F5F5F5]/80" name="goal">
-                <option value="">Select...</option>
-                <option>Increase qualified pipeline</option>
-                <option>Stabilize acquisition cost</option>
-                <option>Improve conversion rate</option>
-                <option>Reposition brand / justify higher pricing</option>
-                <option>Build internal marketing capability</option>
-              </select>
-            </div>
-          </div>
-          <div class="flex flex-col gap-2">
-            <label class="text-[11px] text-dim">Biggest bottleneck right now</label>
-            <textarea rows="3" class="bg-bg border border-line/60 rounded-xl px-4 py-3 text-txt placeholder:text-dim/50 text-sm focus:outline-none focus:border-[#F5F5F5]/80" placeholder="Example: 'Traffic is decent, conversion is bad. Sales is complaining about lead quality.'" name="bottleneck"></textarea>
-          </div>
-          <button type="submit" class="bg-[#F5F5F5] text-[#0A0A0A] font-semibold text-sm rounded-xl px-4 py-3 text-center hover:opacity-90 transition">Request assessment →</button>
-          <div class="text-[10px] text-dim leading-relaxed">
-            This is not a sales call. You’ll get a direct view on where your spend should go first — and where it shouldn’t.
-          </div>
-        </form>
+  class="grid gap-4 text-sm"
+  action="https://formspree.io/f/meovjjww"
+  method="POST"
+>
+  <div class="grid md:grid-cols-2 gap-4">
+    <div class="flex flex-col gap-2">
+      <label class="text-[11px] text-dim">Name</label>
+      <input
+        required
+        name="name"
+        class="bg-bg border border-line/60 rounded-xl px-4 py-3 text-txt placeholder:text-dim/50 text-sm focus:outline-none focus:border-[#F5F5F5]/80"
+        placeholder="Your name"
+        type="text"
+      />
+    </div>
+
+    <div class="flex flex-col gap-2">
+      <label class="text-[11px] text-dim">Role</label>
+      <input
+        required
+        name="role"
+        class="bg-bg border border-line/60 rounded-xl px-4 py-3 text-txt placeholder:text-dim/50 text-sm focus:outline-none focus:border-[#F5F5F5]/80"
+        placeholder="CEO / CMO / Founder / ..."
+        type="text"
+      />
+    </div>
+  </div>
+
+  <div class="grid md:grid-cols-2 gap-4">
+    <div class="flex flex-col gap-2">
+      <label class="text-[11px] text-dim">Work email</label>
+      <input
+        required
+        name="email"
+        type="email"
+        class="bg-bg border border-line/60 rounded-xl px-4 py-3 text-txt placeholder:text-dim/50 text-sm focus:outline-none focus:border-[#F5F5F5]/80"
+        placeholder="you@company.com"
+      />
+    </div>
+
+    <div class="flex flex-col gap-2">
+      <label class="text-[11px] text-dim">Primary goal</label>
+      <select
+        required
+        name="goal"
+        class="bg-bg border border-line/60 rounded-xl px-4 py-3 text-txt text-sm focus:outline-none focus:border-[#F5F5F5]/80"
+      >
+        <option value="">Select...</option>
+        <option>Increase qualified pipeline</option>
+        <option>Stabilize acquisition cost</option>
+        <option>Improve conversion rate</option>
+        <option>Reposition brand / justify higher pricing</option>
+        <option>Build internal marketing capability</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="flex flex-col gap-2">
+    <label class="text-[11px] text-dim">Biggest bottleneck right now</label>
+    <textarea
+      name="bottleneck"
+      rows="3"
+      class="bg-bg border border-line/60 rounded-xl px-4 py-3 text-txt placeholder:text-dim/50 text-sm focus:outline-none focus:border-[#F5F5F5]/80"
+      placeholder="Example: 'Traffic is decent, conversion is bad. Sales is complaining about lead quality.'"
+    ></textarea>
+  </div>
+
+  <button
+    type="submit"
+    class="bg-[#F5F5F5] text-[#0A0A0A] font-semibold text-sm rounded-xl px-4 py-3 text-center hover:opacity-90 transition"
+  >
+    Request assessment →
+  </button>
+
+  <div class="text-[10px] text-dim leading-relaxed">
+    This is not a sales call. You’ll get a direct view on where your spend should
+    go first — and where it shouldn’t.
+  </div>
+</form>
+
       </div>
     </section>
   </main>
